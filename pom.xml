@@ -247,16 +247,8 @@
                         </configuration>
                         <executions>
                             <execution>
-                                <id>clean</id>
-                                <phase>clean</phase>
                                 <goals>
                                     <goal>clean</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>package</id>
-                                <phase>package</phase>
-                                <goals>
                                     <goal>check</goal>
                                 </goals>
                             </execution>
@@ -318,9 +310,6 @@
         </profile>
         <profile>
             <id>maven3</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -437,6 +426,9 @@
         </profile>
         <profile>
             <id>maven2</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
